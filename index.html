@@ -1,67 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>My Bio Page</title>
+<div class="content-wrapper">
+  <!-- Profile picture -->
+  <img
+    class="profile-pic"
+    src="./resources/swishhyypfp.png"
+    alt="Profile Picture"
+  />
 
-    <!-- Use your profile picture as the favicon -->
-    <link rel="icon" type="image/jpg" href="./resources/swishhyypfp.png" />
+  <!-- MOVE login/upvote here -->
+  <div class="upvote-section">
+    <h2>Login / Upvote</h2>
+    <button id="login-btn">Login with GitHub</button>
+    <button id="upvote-btn">Upvote</button>
+    <p id="status"></p>
+    <p id="vote-count"></p>
+  </div>
 
-    <!-- Link to your external CSS file in the same folder as the .png -->
-    <link rel="stylesheet" href="./resources/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="content-wrapper">
-        <img
-          class="profile-pic"
-          src="./resources/swishhyypfp.png"
-          alt="Profile Picture"
-        />
+  <!-- The rest of your bio content -->
+  <div class="bio">
+    <h2>Languages I Know / Currently Learning</h2>
+    <ul>
+      <li>C</li>
+      <li>C#</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>JavaScript</li>
+    </ul>
 
-        <div class="bio">
-          <h2>Languages I Know / Currently Learning</h2>
-          <ul>
-            <li>C</li>
-            <li>C#</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-          </ul>
+    <h2>Socials</h2>
+    <ul class="social-links">
+      <li>
+        <a href="https://discord.gg/v5UyyfVT2y" target="_blank"
+          >Discord Server (NNR)</a
+        >
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@swishhyy" target="_blank">YouTube</a>
+      </li>
+      <li><a href="https://github.com/Swishhyy" target="_blank">GitHub</a></li>
+    </ul>
 
-          <h2>Socials</h2>
-          <ul class="social-links">
-            <li>
-              <a href="https://discord.gg/v5UyyfVT2y" target="_blank"
-                >Discord Server (NNR)</a
-              >
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@swishhyy" target="_blank"
-                >YouTube</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/Swishhyy" target="_blank">GitHub</a>
-            </li>
-          </ul>
-
-          <h2>Login / Upvote</h2>
-          <button id="login-btn">Login with GitHub</button>
-          <button id="upvote-btn">Upvote</button>
-          <p id="status"></p>
-          <p id="vote-count"></p>
-
-          <div class="footer">
-            <p>&copy; 2025 Swishhyy</p>
-          </div>
-        </div>
-      </div>
+    <div class="footer">
+      <p>&copy; 2025 Swishhyy</p>
     </div>
-
-    <!-- 1. Include the Supabase JS library first -->
-    <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
-    <!-- 2. Link to our external script AFTER supabase.js -->
-    <script src="./resources/main.js"></script>
-  </body>
-</html>
+  </div>
+</div>
