@@ -2,56 +2,80 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Bio Page</title>
+    <title>Swishhyy's Profile</title>
 
-    <!-- Use your profile picture as the favicon -->
+    <!-- Favicon (Profile picture) -->
     <link rel="icon" type="image/jpg" href="./resources/swishhyypfp.png" />
 
-    <!-- Link to the external CSS file in the same folder as the .png -->
+    <!-- Main CSS file -->
     <link rel="stylesheet" href="./resources/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="content-wrapper">
-        <!-- Replace with your actual picture filename/URL -->
+    <!-- Main container with a grayish background -->
+    <div class="main-container">
+      <!-- ICON BAR in top-right corner of the container -->
+      <div class="icon-bar">
+        <a href="https://github.com/Swishhyy" target="_blank">
+          <img src="./resources/social_github_icon.png" alt="GitHub" />
+        </a>
+        <a href="https://discord.gg/v5UyyfVT2y" target="_blank">
+          <img src="./resources/discord_icon.png" alt="Discord" />
+        </a>
+        <a href="https://www.youtube.com/@swishhyy" target="_blank">
+          <img src="./resources/youtube_icon.png" alt="YouTube" />
+        </a>
+        <a href="https://www.twitch.tv/swishhyylive" target="_blank">
+          <img src="./resources/twitch_icon.png" alt="Twitch" />
+        </a>
+        <a
+          href="https://steamcommunity.com/profiles/76561198799405698/"
+          target="_blank"
+        >
+          <img src="./resources/steam_icon.png" alt="Steam" />
+        </a>
+      </div>
+
+      <!-- HERO SECTION -->
+      <header class="profile-hero">
         <img
-          class="profile-pic"
+          class="profile-img"
           src="./resources/swishhyypfp.png"
           alt="Profile Picture"
         />
+        <h1 class="profile-name">Swishhyy</h1>
+        <h2 class="profile-role">Student / Developer</h2>
+        <p class="profile-bio">
+          I’m a student always learning more about programming. I primarily use
+          C, C#, Python, Java, and JavaScript.
+        </p>
+      </header>
 
-        <div class="bio">
-          <h2>Languages I Know / Currently Learning</h2>
-          <ul>
-            <li>C</li>
-            <li>C#</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-          </ul>
-
-          <h2>Where to reach me</h2>
-          <ul class="social-links">
-            <li>
-              <a href="https://discord.gg/v5UyyfVT2y" target="_blank"
-                >Discord Server (NNR)</a
-              >
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@swishhyy" target="_blank"
-                >YouTube</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/Swishhyy" target="_blank">GitHub</a>
-            </li>
-          </ul>
-
-          <div class="footer">
-            <p>&copy; 2025 Swishhyy</p>
+      <!-- LANGUAGES SECTION -->
+      <section class="projects-section">
+        <h2>Languages I Know / Currently Learning</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3 class="project-name">C</h3>
+          </div>
+          <div class="project-card">
+            <h3 class="project-name">C#</h3>
+          </div>
+          <div class="project-card">
+            <h3 class="project-name">Python</h3>
+          </div>
+          <div class="project-card">
+            <h3 class="project-name">Java</h3>
+          </div>
+          <div class="project-card">
+            <h3 class="project-name">JavaScript</h3>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <p>&copy; 2025 Swishhyy</p>
+      </footer>
     </div>
   </body>
 </html>

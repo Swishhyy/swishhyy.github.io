@@ -1,71 +1,113 @@
-/* D A R K   B L U E   B A C K G R O U N D */
-body {
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY with an image background */
+body {
   font-family: Arial, sans-serif;
-  background: #1e2b4f; /* Darker blue background */
+  background: url("./background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #ddd;
+  line-height: 1.5;
 }
 
-/* C O N T A I N E R */
-.container {
-  max-width: 800px;
-  margin: 40px auto; /* Center the container horizontally */
-  background: #fff; /* White background for contrast */
-  border-radius: 8px;
+/* MAIN CONTAINER: grayish background */
+.main-container {
+  background-color: #2c2c2c;
+  max-width: 900px;
+  margin: 60px auto;
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative; /* for icon bar absolute positioning */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* F L E X   L A Y O U T   T O   S I D E - B Y - S I D E */
-.content-wrapper {
+/* ICON BAR in top-right corner */
+.icon-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: flex;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  justify-content: center; /* Center horizontally within container */
-  align-items: center; /* Center vertically within the row */
-  text-align: center; /* Center text within each child */
+  gap: 10px;
+}
+.icon-bar img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+.icon-bar img:hover {
+  transform: scale(1.1);
 }
 
-.profile-pic {
-  width: 200px;
-  height: 200px;
+/* HERO SECTION */
+.profile-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 20px;
+  border: 3px solid #333;
+  display: block;
+  margin: 0 auto 20px;
 }
-
-.bio {
-  flex: 1; /* Takes up remaining space */
-  margin: 20px;
-}
-
-/* S T Y L I N G   F O R   T E X T */
-h1 {
+.profile-name {
+  font-size: 2rem;
   margin-bottom: 10px;
 }
-p {
-  line-height: 1.5;
-  margin-bottom: 20px;
+.profile-role {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+.profile-bio {
+  font-size: 0.95rem;
+  color: #aaa;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
-/* S O C I A L   L I N K S */
-.social-links {
-  list-style: none;
-  padding: 0;
+/* PROJECT SECTIONS */
+.projects-section {
+  margin-bottom: 40px;
+}
+.projects-section h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+/* GRID of "cards" */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background-color: #3a3a3a;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.project-name {
+  font-size: 1rem;
+  color: #fff;
   margin: 0;
 }
-.social-links li {
-  display: inline-block;
-  margin: 0 10px;
-}
-.social-links a {
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
-}
 
-/* F O O T E R */
+/* FOOTER */
 .footer {
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #666;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 0.85rem;
 }
