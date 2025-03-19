@@ -7,13 +7,12 @@
     <!-- Use your profile picture as the favicon -->
     <link rel="icon" type="image/jpg" href="./resources/swishhyypfp.png" />
 
-    <!-- Link to the external CSS file in the same folder as the .png -->
+    <!-- Link to your external CSS file in the same folder as the .png -->
     <link rel="stylesheet" href="./resources/styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="content-wrapper">
-        <!-- Replace with your actual picture filename/URL -->
         <img
           class="profile-pic"
           src="./resources/swishhyypfp.png"
@@ -47,17 +46,11 @@
             </li>
           </ul>
 
-          <!-- OPTIONAL: Add login / upvote elements -->
           <h2>Login / Upvote</h2>
-          <!-- A button to log in with GitHub via Supabase -->
           <button id="login-btn">Login with GitHub</button>
-          <!-- A button to demonstrate an upvote or similar action -->
           <button id="upvote-btn">Upvote</button>
-
-          <!-- Feedback area -->
           <p id="status"></p>
           <p id="vote-count"></p>
-          <!-- (Optional) If you want to display total votes -->
 
           <div class="footer">
             <p>&copy; 2025 Swishhyy</p>
@@ -66,96 +59,9 @@
       </div>
     </div>
 
-    <!-- 1. Include the Supabase JS client -->
+    <!-- 1. Include the Supabase JS library first -->
     <script src="https://unpkg.com/@supabase/supabase-js/dist/umd/supabase.js"></script>
-
-    <!-- 2. Your custom JS to handle authentication / upvoting -->
-    <script>
-      // Replace these with your actual Supabase Project credentials:
-      const SUPABASE_URL =
-        "https://supabase.com/dashboard/project/hqqxzrblekkkflfngdyt/editor/29291";
-      const SUPABASE_ANON_KEY =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxcXh6cmJsZWtra2ZsZm5nZHl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzOTMwNzIsImV4cCI6MjA1Nzk2OTA3Mn0.Fp9WVHWYsd5NXM6wakEUh-kJuJUXtMojBE7qYcgjVHw";
-      const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-      // On page load, check if the user is already logged in
-      document.addEventListener("DOMContentLoaded", async () => {
-        await checkUser();
-        await updateVoteCount(); // If you want a global vote count
-      });
-
-      // 1. Sign in via GitHub
-      async function loginWithGitHub() {
-        const { error } = await supabase.auth.signInWithOAuth({
-          provider: "github",
-        });
-        if (error) {
-          console.error("GitHub login error:", error);
-        }
-      }
-
-      // 2. Check user status and update the page
-      async function checkUser() {
-        const {
-          data: { user },
-        } = await supabase.auth.getUser();
-        if (user) {
-          document.getElementById("status").textContent = `Logged in as: ${
-            user.email ?? user.user_metadata.user_name
-          }`;
-        } else {
-          document.getElementById("status").textContent = "Not logged in.";
-        }
-      }
-
-      // 3. Upvote (example action)
-      //    We "upsert" a row in a "votes" table to track that this user has voted
-      async function castVote() {
-        const {
-          data: { user },
-        } = await supabase.auth.getUser();
-
-        if (!user) {
-          alert("You must log in first!");
-          return;
-        }
-
-        // Insert or update a "votes" row with user_id = user.id
-        const { error } = await supabase.from("votes").upsert({
-          user_id: user.id,
-          has_voted: true,
-        });
-
-        if (error) {
-          console.error("Error voting:", error);
-          alert("Error while voting.");
-        } else {
-          alert("Vote recorded!");
-          await updateVoteCount(); // show updated total
-        }
-      }
-
-      // 4. Show total votes
-      //    Works only if your Row-Level Security (RLS) policy allows reading all rows
-      async function updateVoteCount() {
-        const { data, error } = await supabase
-          .from("votes")
-          .select("*", { count: "exact" });
-
-        if (error) {
-          console.error("Error fetching vote count:", error);
-          return;
-        }
-        document.getElementById(
-          "vote-count"
-        ).textContent = `Total votes: ${data.length}`;
-      }
-
-      // Attach event listeners to buttons
-      document
-        .getElementById("login-btn")
-        .addEventListener("click", loginWithGitHub);
-      document.getElementById("upvote-btn").addEventListener("click", castVote);
-    </script>
+    <!-- 2. Link to our external script AFTER supabase.js -->
+    <script src="./resources/main.js"></script>
   </body>
 </html>
