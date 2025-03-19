@@ -3,30 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>My Bio Page</title>
+  <!-- Use your profile picture as the favicon -->
+  <link rel="icon" type="image/jpg" href="profile.jpg" />
+  
   <style>
-    /* Basic reset and some minimal styling */
+    /* D A R K   B L U E   B A C K G R O U N D */
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #1e2b4f; /* Darker blue background */
     }
+    
+    /* C O N T A I N E R */
     .container {
-      max-width: 600px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto; /* Center the container horizontally */
+      background: #fff; /* White background for contrast */
       border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
-    img.profile-pic {
-      width: 150px;
-      height: 150px;
+
+    /* F L E X   L A Y O U T   T O   S I D E - B Y - S I D E */
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;       /* Allows wrapping on smaller screens */
+      justify-content: center; /* Center horizontally within container */
+      align-items: center;     /* Center vertically within the row */
+      text-align: center;      /* Center text within each child */
+    }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
+      margin: 20px;
     }
+
+    .bio {
+      flex: 1;                /* Takes up remaining space */
+      margin: 20px;
+    }
+
+    /* S T Y L I N G   F O R   T E X T */
     h1 {
       margin-bottom: 10px;
     }
@@ -34,6 +55,8 @@
       line-height: 1.5;
       margin-bottom: 20px;
     }
+
+    /* S O C I A L   L I N K S */
     .social-links {
       list-style: none;
       padding: 0;
@@ -48,6 +71,8 @@
       color: #0077cc;
       font-weight: bold;
     }
+
+    /* F O O T E R */
     .footer {
       margin-top: 20px;
       font-size: 0.9em;
@@ -56,27 +81,34 @@
   </style>
 </head>
 <body>
+
   <div class="container">
-    <!-- Update the src attribute with your picture’s path or URL -->
-    <img class="profile-pic" src="profile.jpg" alt="Profile Picture">
+    <div class="content-wrapper">
+      <!-- Replace with your actual picture filename/URL -->
+      <img class="profile-pic" src="profile.jpg" alt="Profile Picture" />
 
-    <h1>Your Name</h1>
-    <p>
-      I am currently a student learning the following programming languages:
-      C, C#, Python, Java, and JavaScript. I enjoy programming and am always
-      looking to improve my skills.
-    </p>
+      <div class="bio">
+        <h1>Your Name</h1>
+        <p>
+          I am currently a student learning the following programming languages:
+          C, C#, Python, Java, and JavaScript. I enjoy programming and am always 
+          looking to improve my skills.
+        </p>
 
-    <h2>Where to reach me</h2>
-    <ul class="social-links">
-      <li><a href="https://discordapp.com/users/your-discord-id" target="_blank">Discord</a></li>
-      <li><a href="https://www.youtube.com/c/your-channel" target="_blank">YouTube</a></li>
-      <li><a href="https://www.twitch.tv/your-channel" target="_blank">Twitch</a></li>
-    </ul>
+        <h2>Where to reach me</h2>
+        <ul class="social-links">
+          <li><a href="https://discordapp.com/users/your-discord-id" target="_blank">Discord</a></li>
+          <li><a href="https://www.youtube.com/c/your-channel" target="_blank">YouTube</a></li>
+          <li><a href="https://www.twitch.tv/your-channel" target="_blank">Twitch</a></li>
+          <li><a href="https://github.com/your-username" target="_blank">GitHub</a></li>
+        </ul>
 
-    <div class="footer">
-      <p>&copy; 2025 Your Name</p>
+        <div class="footer">
+          <p>&copy; 2025 Your Name</p>
+        </div>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
