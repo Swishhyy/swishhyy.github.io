@@ -1,0 +1,71 @@
+/* D A R K   B L U E   B A C K G R O U N D */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #1e2b4f; /* Darker blue background */
+}
+
+/* C O N T A I N E R */
+.container {
+  max-width: 800px;
+  margin: 40px auto; /* Center the container horizontally */
+  background: #fff; /* White background for contrast */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* F L E X   L A Y O U T   T O   S I D E - B Y - S I D E */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center; /* Center horizontally within container */
+  align-items: center; /* Center vertically within the row */
+  text-align: center; /* Center text within each child */
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.bio {
+  flex: 1; /* Takes up remaining space */
+  margin: 20px;
+}
+
+/* S T Y L I N G   F O R   T E X T */
+h1 {
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* S O C I A L   L I N K S */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.social-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.social-links a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+/* F O O T E R */
+.footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}

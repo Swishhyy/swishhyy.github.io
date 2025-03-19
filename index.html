@@ -1,114 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Bio Page</title>
-  <!-- Use your profile picture as the favicon -->
-  <link rel="icon" type="image/jpg" href="profile.jpg" />
-  
-  <style>
-    /* D A R K   B L U E   B A C K G R O U N D */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #1e2b4f; /* Darker blue background */
-    }
-    
-    /* C O N T A I N E R */
-    .container {
-      max-width: 800px;
-      margin: 40px auto; /* Center the container horizontally */
-      background: #fff; /* White background for contrast */
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Bio Page</title>
 
-    /* F L E X   L A Y O U T   T O   S I D E - B Y - S I D E */
-    .content-wrapper {
-      display: flex;
-      flex-wrap: wrap;       /* Allows wrapping on smaller screens */
-      justify-content: center; /* Center horizontally within container */
-      align-items: center;     /* Center vertically within the row */
-      text-align: center;      /* Center text within each child */
-    }
+    <!-- Use your profile picture as the favicon -->
+    <link rel="icon" type="image/jpg" href="./resources/swishhyypfp.png" />
 
-    .profile-pic {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 20px;
-    }
+    <!-- Link to the external CSS file in the same folder as the .png -->
+    <link rel="stylesheet" href="./resources/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-wrapper">
+        <!-- Replace with your actual picture filename/URL -->
+        <img
+          class="profile-pic"
+          src="./resources/swishhyypfp.png"
+          alt="Profile Picture"
+        />
 
-    .bio {
-      flex: 1;                /* Takes up remaining space */
-      margin: 20px;
-    }
+        <div class="bio">
+          <h2>Languages I Know / Currently Learning</h2>
+          <ul>
+            <li>C</li>
+            <li>C#</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+          </ul>
 
-    /* S T Y L I N G   F O R   T E X T */
-    h1 {
-      margin-bottom: 10px;
-    }
-    p {
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
+          <h2>Where to reach me</h2>
+          <ul class="social-links">
+            <li>
+              <a href="https://discord.gg/v5UyyfVT2y" target="_blank"
+                >Discord Server (NNR)</a
+              >
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@swishhyy" target="_blank"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/Swishhyy" target="_blank">GitHub</a>
+            </li>
+          </ul>
 
-    /* S O C I A L   L I N K S */
-    .social-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .social-links li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-    .social-links a {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-
-    /* F O O T E R */
-    .footer {
-      margin-top: 20px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <div class="content-wrapper">
-      <!-- Replace with your actual picture filename/URL -->
-      <img class="profile-pic" src="./resources/swishhyypfp.png" alt="Profile Picture" />
-
-      <div class="bio">
-        <h2>Languages I Know / Currently Learning</h2>
-        <ul>
-          <li>C</li>
-          <li>C#</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-        </ul>
-        <h2>Where to reach me</h2>
-        <ul class="social-links">
-          <li><a href="https://discord.gg/v5UyyfVT2y target="_blank">Discord Server (NNR)</a></li>
-          <li><a href="https://www.youtube.com/@swishhyy" target="_blank">YouTube</a></li>
-          <li><a href="https://github.com/Swishhyy" target="_blank">GitHub</a></li>
-        </ul>
-
-        <div class="footer">
-          <p>&copy; 2025 Swishhyy</p>
+          <div class="footer">
+            <p>&copy; 2025 Swishhyy</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-</body>
+  </body>
 </html>
