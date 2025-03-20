@@ -8,7 +8,7 @@
 /* BODY with an image background */
 body {
   font-family: Arial, sans-serif;
-  background: url("./images/background.png") no-repeat center center fixed;
+  background: url("./background.png") no-repeat center center fixed;
   background-size: cover;
   color: #ddd;
   line-height: 1.5;
@@ -21,7 +21,7 @@ body {
   margin: 60px auto;
   border-radius: 12px;
   padding: 20px;
-  position: relative; /* So absolute children (icon bar, view-projects) can be placed inside */
+  position: relative; /* for icon bar absolute positioning */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -112,36 +112,6 @@ body {
   font-size: 0.85rem;
 }
 
-/* -----------------------------
-   "VIEW PROJECTS" bottom-right
-   ----------------------------- */
-.view-projects {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.view-projects a {
-  display: inline-flex;
-  align-items: center;
-  color: #ddd;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-.view-projects a:hover {
-  color: #fff;
-}
-
-.view-projects img {
-  width: 16px;
-  height: 16px;
-  object-fit: cover;
-  margin-left: 5px;
-}
-
 /* --------------------------------
    RESPONSIVE TWEAKS FOR MOBILE
    -------------------------------- */
@@ -182,10 +152,5 @@ body {
   }
   .footer {
     font-size: 0.8rem;
-  }
-  /* Place "View Projects" a bit higher if desired, for small screens */
-  .view-projects {
-    bottom: 10px;
-    right: 10px;
   }
 }
